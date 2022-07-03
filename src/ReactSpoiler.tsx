@@ -31,7 +31,7 @@ export interface Props {
   noOfLines?: number;
   lineHeight?: number;
   collapsedSize?: number;
-  containerStyle?: React.CSSProperties;
+  toggleContainerStyle?: React.CSSProperties;
   showMoreComponent?: React.ReactNode;
   showLessComponent?: React.ReactNode;
 }
@@ -48,7 +48,7 @@ export const ReactSpoiler: FC<Props> = ({
   collapsedSize = 0,
   showMoreComponent = 'Show More',
   showLessComponent = 'Show Less',
-  containerStyle = { marginTop: '1rem', color: 'green' },
+  toggleContainerStyle = { marginTop: '1rem', color: 'green' },
 }) => {
   const [readMore, setReadMore] = useState(false);
   const collapseRef = useRef<HTMLDivElement>();
@@ -120,7 +120,7 @@ export const ReactSpoiler: FC<Props> = ({
       </Collapse>
       {showToggle() && (
         <Box
-          style={{ ...containerStyle, cursor: 'pointer' }}
+          style={{ ...toggleContainerStyle, cursor: 'pointer' }}
           onClick={() => {
             setReadMore(prev => !prev);
           }}
