@@ -2,6 +2,8 @@
 
 React Simple Spoiler helps you to create a collapsible spoiler component where some portion of your component is visible and can be toggled.
 
+![GIF showing the basic working of react-simple-spoiler](https://miro.medium.com/max/1400/1*rEVK6f5zZ8JNkOFGzc-Qsg.gif)
+
 ## Installation
 
 Use the package manager [npm](https://nodejs.org/en/) to install react-simple-spoiler.
